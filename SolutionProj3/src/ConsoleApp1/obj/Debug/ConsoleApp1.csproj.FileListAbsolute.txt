@@ -1,0 +1,8 @@
+D:\Programação\SolutionProj3\src\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+D:\Programação\SolutionProj3\src\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+D:\Programação\SolutionProj3\src\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Programação\SolutionProj3\src\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\Programação\SolutionProj3\src\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\Programação\SolutionProj3\src\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\Programação\SolutionProj3\src\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\Programação\SolutionProj3\src\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
