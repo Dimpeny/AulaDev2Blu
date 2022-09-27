@@ -1,0 +1,8 @@
+D:\Programação aula\Devs2Blu\SlnAulaOOP2\src\Devs2Blu.ProjetosAula.OOP2Classes\bin\Debug\Devs2Blu.ProjetosAula.OOP2Classes.exe.config
+D:\Programação aula\Devs2Blu\SlnAulaOOP2\src\Devs2Blu.ProjetosAula.OOP2Classes\bin\Debug\Devs2Blu.ProjetosAula.OOP2Classes.exe
+D:\Programação aula\Devs2Blu\SlnAulaOOP2\src\Devs2Blu.ProjetosAula.OOP2Classes\bin\Debug\Devs2Blu.ProjetosAula.OOP2Classes.pdb
+D:\Programação aula\Devs2Blu\SlnAulaOOP2\src\Devs2Blu.ProjetosAula.OOP2Classes\obj\Debug\Devs2Blu.ProjetosAula.OOP2Classes.csproj.AssemblyReference.cache
+D:\Programação aula\Devs2Blu\SlnAulaOOP2\src\Devs2Blu.ProjetosAula.OOP2Classes\obj\Debug\Devs2Blu.ProjetosAula.OOP2Classes.csproj.SuggestedBindingRedirects.cache
+D:\Programação aula\Devs2Blu\SlnAulaOOP2\src\Devs2Blu.ProjetosAula.OOP2Classes\obj\Debug\Devs2Blu.ProjetosAula.OOP2Classes.csproj.CoreCompileInputs.cache
+D:\Programação aula\Devs2Blu\SlnAulaOOP2\src\Devs2Blu.ProjetosAula.OOP2Classes\obj\Debug\Devs2Blu.ProjetosAula.OOP2Classes.exe
+D:\Programação aula\Devs2Blu\SlnAulaOOP2\src\Devs2Blu.ProjetosAula.OOP2Classes\obj\Debug\Devs2Blu.ProjetosAula.OOP2Classes.pdb
