@@ -20,5 +20,14 @@ namespace Devs2Blu.ProjetosAula.sistemaCadastro.Models.Model
         {
             Status = FlStatus.A;
         }
+
+        public Pessoa(int id, string nome, string cGCCPF, TipoPessoa tipoPessoa, FlStatus status)
+        {
+            Id = id;
+            Nome = nome;
+            CGCCPF = cGCCPF;
+            TipoPessoa = tipoPessoa;
+            Status = status;
+        }
     }
 }
