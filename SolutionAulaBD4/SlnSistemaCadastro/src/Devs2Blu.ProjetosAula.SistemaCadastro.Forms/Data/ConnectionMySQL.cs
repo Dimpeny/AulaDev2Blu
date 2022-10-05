@@ -14,16 +14,20 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
         public static String Server { get; set; }
         public static String  DataBase { get; set; }
         public static String User { get; set; }
-        public static String Password { get; set; }
+        //Use if not using XAMPP
+        //public static String Password { get; set; }
 
         public static MySqlConnection GetConnection()
         {
             Server = "localhost";
             DataBase = "sistemacadastro";
             User = "root";
-            Password = "root";
-            ConnectionString = $"Persist Security Info=False;server={Server};database={DataBase};uid={User};server={Server};database={DataBase};uid={User};pwd='{Password}'";
+            // //Use when not using XAMPP
+            //Password = "root";
+            //ConnectionString = $"Persist Security Info=False;server={Server};database={DataBase};uid={User};server={Server};database={DataBase};uid={User};pwd='{Password}'";
+            ConnectionString = $"Persist Security Info=False;server={Server};database={DataBase};uid={User};server={Server};database={DataBase};uid={User};";
             var conn = new MySqlConnection(ConnectionString);
+
 
             try
             {

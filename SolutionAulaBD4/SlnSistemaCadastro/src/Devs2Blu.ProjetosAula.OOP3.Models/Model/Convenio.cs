@@ -13,6 +13,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Models.Model
         public String Nome { get; set; }
         public FlConvStatus Status { get; set; }
 
+
         public Convenio()
         {
             Status = FlConvStatus.A;
