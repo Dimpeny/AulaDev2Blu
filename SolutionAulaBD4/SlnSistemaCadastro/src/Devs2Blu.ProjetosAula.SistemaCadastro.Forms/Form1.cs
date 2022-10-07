@@ -31,7 +31,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
             {
 
                 MessageBox.Show("Conexão efetuada com sucesso!", "Conexão MySQL!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
                 Conn.Close();
 
             }
@@ -39,33 +39,32 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
         }
 
         #region Metodos
-        public  void PopulaComboBox()
+        public void PopulaComboBox()
         {
             var listConvenios = ConvenioRepository.FetchAll();
 
-            while (listConvenios.Read())
-            {
-                cboConvenio.Items.Add(listConvenios.GetString("nome"));
-            }
+
+            cboConvenio.DataSource = new BindingSource(listConvenios, null);
+            cboConvenio.DisplayMember = "nome";
+            cboConvenio.ValueMember = "id";
         }
         #endregion
 
         private void rbFisica_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbFisica.Checked)
-            {
-                lblCGCCPF.Text = "CPF:";
-                lblCGCCPF.Visible = true;
-            }
+
+            lblCGCCPF.Text = "CPF:";
+            lblCGCCPF.Visible = true;
+
         }
 
         private void rbJuridica_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbJuridica.Checked)
-            {
-                lblCGCCPF.Text = "CNPJ:";
-                lblCGCCPF.Visible = true;
-            }
+
+            lblCGCCPF.Text = "CNPJ:";
+            lblCGCCPF.Visible = true;
+
         }
+
     }
 }
