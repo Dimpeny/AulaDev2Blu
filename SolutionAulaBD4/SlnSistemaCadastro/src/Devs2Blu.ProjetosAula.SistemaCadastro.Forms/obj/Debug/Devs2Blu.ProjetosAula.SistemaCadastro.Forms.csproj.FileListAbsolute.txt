@@ -22,3 +22,5 @@ D:\Programação aula\Devs2Blu\SolutionAulaBD4\SlnSistemaCadastro\src\Devs2Blu.P
 D:\Programação aula\Devs2Blu\SolutionAulaBD4\SlnSistemaCadastro\src\Devs2Blu.ProjetosAula.SistemaCadastro.Forms\obj\Debug\Devs2Blu.ProjetosAula.SistemaCadastro.Forms.csproj.CopyComplete
 D:\Programação aula\Devs2Blu\SolutionAulaBD4\SlnSistemaCadastro\src\Devs2Blu.ProjetosAula.SistemaCadastro.Forms\obj\Debug\Devs2Blu.ProjetosAula.SistemaCadastro.Forms.exe
 D:\Programação aula\Devs2Blu\SolutionAulaBD4\SlnSistemaCadastro\src\Devs2Blu.ProjetosAula.SistemaCadastro.Forms\obj\Debug\Devs2Blu.ProjetosAula.SistemaCadastro.Forms.pdb
+D:\Programação aula\Devs2Blu\SolutionAulaBD4\SlnSistemaCadastro\src\Devs2Blu.ProjetosAula.SistemaCadastro.Forms\bin\Debug\Devs2Blu.ProjetosAula.SistemaCadastro.Models.dll
+D:\Programação aula\Devs2Blu\SolutionAulaBD4\SlnSistemaCadastro\src\Devs2Blu.ProjetosAula.SistemaCadastro.Forms\bin\Debug\Devs2Blu.ProjetosAula.SistemaCadastro.Models.pdb

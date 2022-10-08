@@ -31,9 +31,11 @@
             this.cboConvenio = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gpFormCadastro = new System.Windows.Forms.GroupBox();
-            this.tbCGCCPF = new System.Windows.Forms.TextBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.tbNome = new System.Windows.Forms.TextBox();
             this.gpEnderecoCadastro = new System.Windows.Forms.GroupBox();
+            this.tbNumero = new System.Windows.Forms.TextBox();
+            this.mskCep = new System.Windows.Forms.MaskedTextBox();
             this.tbBairro = new System.Windows.Forms.TextBox();
             this.tbRua = new System.Windows.Forms.TextBox();
             this.tbCidade = new System.Windows.Forms.TextBox();
@@ -49,17 +51,17 @@
             this.gpTipoPessoa = new System.Windows.Forms.GroupBox();
             this.rbJuridica = new System.Windows.Forms.RadioButton();
             this.rbFisica = new System.Windows.Forms.RadioButton();
-            this.mskCep = new System.Windows.Forms.MaskedTextBox();
-            this.tbNumero = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tbCGCCPF = new System.Windows.Forms.MaskedTextBox();
             this.gpFormCadastro.SuspendLayout();
             this.gpEnderecoCadastro.SuspendLayout();
             this.gpTipoPessoa.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cboConvenio
@@ -82,8 +84,8 @@
             // gpFormCadastro
             // 
             this.gpFormCadastro.BackColor = System.Drawing.SystemColors.Control;
-            this.gpFormCadastro.Controls.Add(this.btnLimpar);
             this.gpFormCadastro.Controls.Add(this.tbCGCCPF);
+            this.gpFormCadastro.Controls.Add(this.btnLimpar);
             this.gpFormCadastro.Controls.Add(this.tbNome);
             this.gpFormCadastro.Controls.Add(this.gpEnderecoCadastro);
             this.gpFormCadastro.Controls.Add(this.lblCGCCPF);
@@ -98,12 +100,15 @@
             this.gpFormCadastro.TabStop = false;
             this.gpFormCadastro.Text = "Formulario de Cadastro";
             // 
-            // tbCGCCPF
+            // btnLimpar
             // 
-            this.tbCGCCPF.Location = new System.Drawing.Point(59, 52);
-            this.tbCGCCPF.Name = "tbCGCCPF";
-            this.tbCGCCPF.Size = new System.Drawing.Size(157, 20);
-            this.tbCGCCPF.TabIndex = 5;
+            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnLimpar.Location = new System.Drawing.Point(19, 284);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 6;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
             // 
             // tbNome
             // 
@@ -133,6 +138,21 @@
             this.gpEnderecoCadastro.TabIndex = 3;
             this.gpEnderecoCadastro.TabStop = false;
             this.gpEnderecoCadastro.Text = "Endereço/Contato";
+            // 
+            // tbNumero
+            // 
+            this.tbNumero.Location = new System.Drawing.Point(61, 79);
+            this.tbNumero.Name = "tbNumero";
+            this.tbNumero.Size = new System.Drawing.Size(100, 20);
+            this.tbNumero.TabIndex = 12;
+            // 
+            // mskCep
+            // 
+            this.mskCep.Location = new System.Drawing.Point(43, 13);
+            this.mskCep.Mask = "00.000-00";
+            this.mskCep.Name = "mskCep";
+            this.mskCep.Size = new System.Drawing.Size(77, 20);
+            this.mskCep.TabIndex = 11;
             // 
             // tbBairro
             // 
@@ -271,26 +291,11 @@
             this.rbFisica.UseVisualStyleBackColor = true;
             this.rbFisica.CheckedChanged += new System.EventHandler(this.rbFisica_CheckedChanged);
             // 
-            // mskCep
-            // 
-            this.mskCep.Location = new System.Drawing.Point(43, 13);
-            this.mskCep.Mask = "000.000.000-00";
-            this.mskCep.Name = "mskCep";
-            this.mskCep.Size = new System.Drawing.Size(77, 20);
-            this.mskCep.TabIndex = 11;
-            // 
-            // tbNumero
-            // 
-            this.tbNumero.Location = new System.Drawing.Point(61, 79);
-            this.tbNumero.Name = "tbNumero";
-            this.tbNumero.Size = new System.Drawing.Size(100, 20);
-            this.tbNumero.TabIndex = 12;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnInfo);
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.btnSalvar);
             this.groupBox1.Location = new System.Drawing.Point(12, 367);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 74);
@@ -298,39 +303,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // button1
+            // btnInfo
             // 
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 49);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnInfo.Location = new System.Drawing.Point(701, 19);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(75, 49);
+            this.btnInfo.TabIndex = 2;
+            this.btnInfo.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(87, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 49);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(87, 19);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 49);
+            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSalvar
             // 
-            this.button3.Location = new System.Drawing.Point(701, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 49);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSalvar.Location = new System.Drawing.Point(6, 19);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 49);
+            this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // btnLimpar
+            // dataGridView1
             // 
-            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnLimpar.Location = new System.Drawing.Point(19, 284);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 6;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(474, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(314, 323);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // tbCGCCPF
+            // 
+            this.tbCGCCPF.Location = new System.Drawing.Point(59, 56);
+            this.tbCGCCPF.Mask = "000.000.000-00";
+            this.tbCGCCPF.Name = "tbCGCCPF";
+            this.tbCGCCPF.Size = new System.Drawing.Size(157, 20);
+            this.tbCGCCPF.TabIndex = 7;
             // 
             // Form1
             // 
@@ -338,6 +350,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpFormCadastro);
             this.Name = "Form1";
@@ -350,6 +363,7 @@
             this.gpTipoPessoa.ResumeLayout(false);
             this.gpTipoPessoa.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -365,7 +379,6 @@
         private System.Windows.Forms.RadioButton rbJuridica;
         private System.Windows.Forms.RadioButton rbFisica;
         private System.Windows.Forms.GroupBox gpEnderecoCadastro;
-        private System.Windows.Forms.TextBox tbCGCCPF;
         private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.ComboBox cbUf;
         private System.Windows.Forms.Label label8;
@@ -381,9 +394,11 @@
         private System.Windows.Forms.TextBox tbNumero;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInfo;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MaskedTextBox tbCGCCPF;
     }
 }
 
