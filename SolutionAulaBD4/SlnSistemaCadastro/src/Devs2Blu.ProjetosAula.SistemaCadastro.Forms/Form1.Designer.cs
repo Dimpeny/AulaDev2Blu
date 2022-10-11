@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.cboConvenio = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gpFormCadastro = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.mskCGCCPF = new System.Windows.Forms.MaskedTextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.tbNome = new System.Windows.Forms.TextBox();
             this.gpEnderecoCadastro = new System.Windows.Forms.GroupBox();
@@ -39,7 +43,7 @@
             this.tbBairro = new System.Windows.Forms.TextBox();
             this.tbRua = new System.Windows.Forms.TextBox();
             this.tbCidade = new System.Windows.Forms.TextBox();
-            this.cbUf = new System.Windows.Forms.ComboBox();
+            this.cboUf = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,23 +55,23 @@
             this.gpTipoPessoa = new System.Windows.Forms.GroupBox();
             this.rbJuridica = new System.Windows.Forms.RadioButton();
             this.rbFisica = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxBtns = new System.Windows.Forms.GroupBox();
             this.btnInfo = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tbCGCCPF = new System.Windows.Forms.MaskedTextBox();
+            this.dgPessoa = new System.Windows.Forms.DataGridView();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.gpFormCadastro.SuspendLayout();
             this.gpEnderecoCadastro.SuspendLayout();
             this.gpTipoPessoa.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBoxBtns.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPessoa)).BeginInit();
             this.SuspendLayout();
             // 
             // cboConvenio
             // 
             this.cboConvenio.FormattingEnabled = true;
-            this.cboConvenio.Location = new System.Drawing.Point(283, 56);
+            this.cboConvenio.Location = new System.Drawing.Point(310, 56);
             this.cboConvenio.Name = "cboConvenio";
             this.cboConvenio.Size = new System.Drawing.Size(152, 21);
             this.cboConvenio.TabIndex = 0;
@@ -75,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(222, 59);
+            this.label1.Location = new System.Drawing.Point(249, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 1;
@@ -84,7 +88,9 @@
             // gpFormCadastro
             // 
             this.gpFormCadastro.BackColor = System.Drawing.SystemColors.Control;
-            this.gpFormCadastro.Controls.Add(this.tbCGCCPF);
+            this.gpFormCadastro.Controls.Add(this.label9);
+            this.gpFormCadastro.Controls.Add(this.textBox1);
+            this.gpFormCadastro.Controls.Add(this.mskCGCCPF);
             this.gpFormCadastro.Controls.Add(this.btnLimpar);
             this.gpFormCadastro.Controls.Add(this.tbNome);
             this.gpFormCadastro.Controls.Add(this.gpEnderecoCadastro);
@@ -95,10 +101,34 @@
             this.gpFormCadastro.Controls.Add(this.cboConvenio);
             this.gpFormCadastro.Location = new System.Drawing.Point(12, 12);
             this.gpFormCadastro.Name = "gpFormCadastro";
-            this.gpFormCadastro.Size = new System.Drawing.Size(456, 323);
+            this.gpFormCadastro.Size = new System.Drawing.Size(1123, 323);
             this.gpFormCadastro.TabIndex = 2;
             this.gpFormCadastro.TabStop = false;
             this.gpFormCadastro.Text = "Formulario de Cadastro";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(222, 112);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Paciente Risco:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(310, 107);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(152, 20);
+            this.textBox1.TabIndex = 8;
+            // 
+            // mskCGCCPF
+            // 
+            this.mskCGCCPF.Location = new System.Drawing.Point(59, 56);
+            this.mskCGCCPF.Mask = "000.000.000-00";
+            this.mskCGCCPF.Name = "mskCGCCPF";
+            this.mskCGCCPF.Size = new System.Drawing.Size(157, 20);
+            this.mskCGCCPF.TabIndex = 7;
             // 
             // btnLimpar
             // 
@@ -109,12 +139,13 @@
             this.btnLimpar.TabIndex = 6;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // tbNome
             // 
             this.tbNome.Location = new System.Drawing.Point(59, 19);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(376, 20);
+            this.tbNome.Size = new System.Drawing.Size(403, 20);
             this.tbNome.TabIndex = 4;
             // 
             // gpEnderecoCadastro
@@ -125,7 +156,7 @@
             this.gpEnderecoCadastro.Controls.Add(this.tbBairro);
             this.gpEnderecoCadastro.Controls.Add(this.tbRua);
             this.gpEnderecoCadastro.Controls.Add(this.tbCidade);
-            this.gpEnderecoCadastro.Controls.Add(this.cbUf);
+            this.gpEnderecoCadastro.Controls.Add(this.cboUf);
             this.gpEnderecoCadastro.Controls.Add(this.label8);
             this.gpEnderecoCadastro.Controls.Add(this.label7);
             this.gpEnderecoCadastro.Controls.Add(this.label6);
@@ -175,13 +206,41 @@
             this.tbCidade.Size = new System.Drawing.Size(176, 20);
             this.tbCidade.TabIndex = 8;
             // 
-            // cbUf
+            // cboUf
             // 
-            this.cbUf.FormattingEnabled = true;
-            this.cbUf.Location = new System.Drawing.Point(156, 12);
-            this.cbUf.Name = "cbUf";
-            this.cbUf.Size = new System.Drawing.Size(32, 21);
-            this.cbUf.TabIndex = 7;
+            this.cboUf.FormattingEnabled = true;
+            this.cboUf.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
+            this.cboUf.Location = new System.Drawing.Point(156, 12);
+            this.cboUf.Name = "cboUf";
+            this.cboUf.Size = new System.Drawing.Size(32, 21);
+            this.cboUf.TabIndex = 7;
             // 
             // label8
             // 
@@ -240,7 +299,7 @@
             // lblCGCCPF
             // 
             this.lblCGCCPF.AutoSize = true;
-            this.lblCGCCPF.Location = new System.Drawing.Point(16, 59);
+            this.lblCGCCPF.Location = new System.Drawing.Point(24, 59);
             this.lblCGCCPF.Name = "lblCGCCPF";
             this.lblCGCCPF.Size = new System.Drawing.Size(30, 13);
             this.lblCGCCPF.TabIndex = 3;
@@ -282,7 +341,7 @@
             // 
             this.rbFisica.AutoSize = true;
             this.rbFisica.Checked = true;
-            this.rbFisica.Location = new System.Drawing.Point(7, 20);
+            this.rbFisica.Location = new System.Drawing.Point(23, 22);
             this.rbFisica.Name = "rbFisica";
             this.rbFisica.Size = new System.Drawing.Size(52, 17);
             this.rbFisica.TabIndex = 0;
@@ -291,67 +350,84 @@
             this.rbFisica.UseVisualStyleBackColor = true;
             this.rbFisica.CheckedChanged += new System.EventHandler(this.rbFisica_CheckedChanged);
             // 
-            // groupBox1
+            // groupBoxBtns
             // 
-            this.groupBox1.Controls.Add(this.btnInfo);
-            this.groupBox1.Controls.Add(this.btnCancelar);
-            this.groupBox1.Controls.Add(this.btnSalvar);
-            this.groupBox1.Location = new System.Drawing.Point(12, 367);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 74);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBoxBtns.Controls.Add(this.btnEditar);
+            this.groupBoxBtns.Controls.Add(this.btnInfo);
+            this.groupBoxBtns.Controls.Add(this.btnCancelar);
+            this.groupBoxBtns.Controls.Add(this.btnSalvar);
+            this.groupBoxBtns.Location = new System.Drawing.Point(12, 569);
+            this.groupBoxBtns.Name = "groupBoxBtns";
+            this.groupBoxBtns.Size = new System.Drawing.Size(1123, 74);
+            this.groupBoxBtns.TabIndex = 3;
+            this.groupBoxBtns.TabStop = false;
+            this.groupBoxBtns.Text = "Opções";
             // 
             // btnInfo
             // 
-            this.btnInfo.Location = new System.Drawing.Point(701, 19);
+            this.btnInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInfo.BackgroundImage")));
+            this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Location = new System.Drawing.Point(1042, 19);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(75, 49);
+            this.btnInfo.Size = new System.Drawing.Size(50, 50);
             this.btnInfo.TabIndex = 2;
             this.btnInfo.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(87, 19);
+            this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Location = new System.Drawing.Point(77, 19);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 49);
+            this.btnCancelar.Size = new System.Drawing.Size(50, 50);
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnSalvar
             // 
+            this.btnSalvar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalvar.BackgroundImage")));
+            this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalvar.FlatAppearance.BorderSize = 0;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Location = new System.Drawing.Point(6, 19);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 49);
+            this.btnSalvar.Size = new System.Drawing.Size(50, 50);
             this.btnSalvar.TabIndex = 0;
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // dataGridView1
+            // dgPessoa
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(474, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(314, 323);
-            this.dataGridView1.TabIndex = 4;
+            this.dgPessoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPessoa.Location = new System.Drawing.Point(12, 341);
+            this.dgPessoa.Name = "dgPessoa";
+            this.dgPessoa.Size = new System.Drawing.Size(1123, 222);
+            this.dgPessoa.TabIndex = 4;
             // 
-            // tbCGCCPF
+            // btnEditar
             // 
-            this.tbCGCCPF.Location = new System.Drawing.Point(59, 56);
-            this.tbCGCCPF.Mask = "000.000.000-00";
-            this.tbCGCCPF.Name = "tbCGCCPF";
-            this.tbCGCCPF.Size = new System.Drawing.Size(157, 20);
-            this.tbCGCCPF.TabIndex = 7;
+            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Location = new System.Drawing.Point(137, 18);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(50, 50);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1147, 655);
+            this.Controls.Add(this.dgPessoa);
+            this.Controls.Add(this.groupBoxBtns);
             this.Controls.Add(this.gpFormCadastro);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -362,8 +438,8 @@
             this.gpEnderecoCadastro.PerformLayout();
             this.gpTipoPessoa.ResumeLayout(false);
             this.gpTipoPessoa.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBoxBtns.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgPessoa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -380,7 +456,7 @@
         private System.Windows.Forms.RadioButton rbFisica;
         private System.Windows.Forms.GroupBox gpEnderecoCadastro;
         private System.Windows.Forms.TextBox tbNome;
-        private System.Windows.Forms.ComboBox cbUf;
+        private System.Windows.Forms.ComboBox cboUf;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -393,12 +469,15 @@
         private System.Windows.Forms.MaskedTextBox mskCep;
         private System.Windows.Forms.TextBox tbNumero;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxBtns;
         private System.Windows.Forms.Button btnInfo;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MaskedTextBox tbCGCCPF;
+        private System.Windows.Forms.DataGridView dgPessoa;
+        private System.Windows.Forms.MaskedTextBox mskCGCCPF;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
 

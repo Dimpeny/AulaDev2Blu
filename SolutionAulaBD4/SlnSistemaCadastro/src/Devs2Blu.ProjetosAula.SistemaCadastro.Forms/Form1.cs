@@ -1,4 +1,6 @@
-﻿using Devs2Blu.ProjetosAula.sistemaCadastro.Models.Model;
+﻿using Devs2Blu.ProjetosAula.sistemaCadastro.Models.Enum;
+using Devs2Blu.ProjetosAula.sistemaCadastro.Models.Model;
+using Devs2Blu.ProjetosAula.SistemaCadastro.Models.Model;
 using Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data;
 using MySql.Data.MySqlClient;
 using System;
@@ -16,8 +18,12 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
     public partial class Form1 : Form
     {
         public MySqlConnection Conn { get; set; }
+        public PessoaRepository PessoaRepository { get; set; }
+        public EnderecoRepository EnderecoRepository { get; set; }
         public ConvenioRepository ConvenioRepository { get; set; }
         public PacienteRepository PacienteRepository { get; set; }
+        public Random rd;
+
         public Form1()
         {
             InitializeComponent();
@@ -25,8 +31,11 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            rd = new Random();
             ConvenioRepository = new ConvenioRepository();
+            EnderecoRepository = new EnderecoRepository();
             PacienteRepository = new PacienteRepository();
+            PessoaRepository = new PessoaRepository();
             Conn = ConnectionMySQL.GetConnection();
 
             if (Conn.State == ConnectionState.Open)
@@ -38,6 +47,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
 
             }
             PopulaComboBox();
+            PopulaGrid();
         }
 
         #region Metodos
@@ -51,11 +61,18 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
             cboConvenio.ValueMember = "id";
         }
 
+        public void PopulaGrid()
+        {
+            var listaPacientes = PessoaRepository.PreencherGrid();
+
+            dgPessoa.DataSource = new BindingSource(listaPacientes, null);
+        }
+
         private bool ValidaFormCadastro()
         {
             if (tbNome.Text.Equals(""))
                 return false;
-            if (tbCGCCPF.Text.Equals(""))
+            if (mskCGCCPF.Text.Equals(""))
                 return false;
             /*if (cboConvenio.SelectedIndex == -1)
                 return false;
@@ -73,7 +90,20 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
                 return false;*/
 
             return true;
-        } 
+        }
+
+        private void LimparCampos()
+        {
+            tbNome.Text = string.Empty;
+            tbBairro.Text = string.Empty;
+            tbCidade.Text = string.Empty;
+            tbNumero.Text = string.Empty;
+            tbRua.Text = string.Empty;
+            mskCGCCPF.Text = string.Empty;
+            mskCep.Text = string.Empty;
+            cboConvenio.SelectedIndex = -1;
+            cboUf.SelectedIndex = -1;
+        }
 
         #endregion
 
@@ -97,18 +127,75 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
         {
             if (ValidaFormCadastro())
             {
-                Paciente paciente = new Paciente();
-                paciente.Pessoa.Nome = tbNome.Text;
-                paciente.Pessoa.CGCCPF = tbCGCCPF.Text;
-                var pacienteResult = PacienteRepository.Save(paciente);
-                if(pacienteResult.Pessoa.Id > 0)
+                Pessoa pessoa = preencherPessoa();
+                try
                 {
-                    MessageBox.Show("Pessoa salva com sucesso", "Adicionar pessoa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    pessoa = PessoaRepository.Save(pessoa);
                 }
+                catch (Exception myex)
+                {
+                    pessoa.Id = 0;
+                }
+
+
+                if (pessoa.Id > 0)
+                {
+                    Endereco endereco = preencherEndereco(pessoa);
+                    EnderecoRepository.Save(endereco);
+                }
+
+                if (pessoa.Id > 0)
+                {
+                    Paciente paciente = new Paciente();
+                    Int32.TryParse($"{paciente.Id}{rd.Next(100, 999)}", out int nrProntuario);
+                    paciente.NrProntuario = nrProntuario;
+                    paciente.PacienteRisco = "";
+                    paciente.Convenio.Id = (int)cboConvenio.SelectedValue;
+                    paciente.Pessoa = pessoa;
+
+                    var pacienteResult = PacienteRepository.Save(paciente);
+                }
+
+                PopulaGrid();
+
             }
         }
+
+        public Pessoa preencherPessoa()
+        {
+            Pessoa pessoa = new Pessoa();
+            pessoa.Nome = tbNome.Text;
+            if (rbFisica.Checked)
+            {
+                pessoa.TipoPessoa = TipoPessoa.PF;
+            }
+            else
+            {
+                pessoa.TipoPessoa = TipoPessoa.PJ;
+            }
+
+            pessoa.CGCCPF = mskCGCCPF.Text;
+            return pessoa;
+        }
+
+        public Endereco preencherEndereco(Pessoa pessoa)
+        {
+            Endereco endereco = new Endereco();
+            endereco.CEP = mskCep.Text;
+            endereco.Rua = tbRua.Text;
+            endereco.Numero = Int32.Parse(tbNumero.Text);
+            endereco.Bairro = tbBairro.Text;
+            endereco.Cidade = tbCidade.Text;
+            endereco.UF = cboUf.SelectedItem.ToString();
+            endereco.Pessoa = pessoa;
+            return endereco;
+        }
         #endregion
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
 
     }
 }
