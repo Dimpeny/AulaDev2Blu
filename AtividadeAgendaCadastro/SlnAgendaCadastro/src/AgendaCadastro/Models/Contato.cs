@@ -19,5 +19,24 @@ namespace AgendaCadastro.Models
         public String Cidade { get; set; }
         public Estado Estado { get; set; }
         public Status Status { get; set; }
+
+        public Contato()
+        {
+
+        }
+
+        public Contato(int id, string nome, string numeroTelefonico, string cep, int numero, string rua, string bairro, string cidade, Estado estado, Status status)
+        {
+            Id = id;
+            Nome = nome;
+            NumeroTelefonico = numeroTelefonico;
+            Cep = cep;
+            Numero = numero;
+            Rua = rua;
+            Bairro = bairro;
+            Cidade = cidade;
+            Estado = estado;
+            Status = status;
+        }
     }
 }
