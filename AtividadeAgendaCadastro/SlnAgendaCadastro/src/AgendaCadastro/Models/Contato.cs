@@ -22,7 +22,7 @@ namespace AgendaCadastro.Models
 
         public Contato()
         {
-
+            Status = Status.A;
         }
 
         public Contato(int id, string nome, string numeroTelefonico, string cep, int numero, string rua, string bairro, string cidade, Estado estado, Status status)
