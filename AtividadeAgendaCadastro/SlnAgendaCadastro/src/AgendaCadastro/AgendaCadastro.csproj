@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\ConnectionMySQL.cs" />
+    <Compile Include="Data\EstadoConnector.cs" />
     <Compile Include="Enum\DiaSemana.cs" />
     <Compile Include="Enum\Status.cs" />
     <Compile Include="Form1.cs">
