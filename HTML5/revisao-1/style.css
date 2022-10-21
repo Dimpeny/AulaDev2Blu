@@ -56,6 +56,10 @@ main {
   background-color: rgb(196, 246, 255);
 }
 
+ul {
+  list-style: none;
+}
+
 .first-list-item {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
