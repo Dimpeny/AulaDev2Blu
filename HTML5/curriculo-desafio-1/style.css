@@ -28,7 +28,7 @@ figure {
   display: inline-flex;
 }
 
-header > figure {
+header figure {
   color: rgb(0, 255, 251);
 }
 
@@ -71,9 +71,6 @@ div.conteudo strong {
   text-indent: 1.5em;
 }
 
-.artheader{
-    border-bottom: 3px double #000;
-}
 
 /* Footer */
 footer {

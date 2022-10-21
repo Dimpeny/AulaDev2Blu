@@ -1,0 +1,92 @@
+/* Base formatting */
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+figure {
+  height: 120px;
+  display: inline-flex;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: rgb(255, 231, 235);
+}
+/* Header formatting */
+header {
+  border-bottom: 2px;
+  border-style: solid;
+  border-color: black;
+  width: 100vw;
+  height: 120px;
+  background-color: #fff;
+}
+
+header > figure {
+  height: 100px;
+  color: rgb(0, 255, 251);
+}
+
+header > figure > img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Prominence section formatting */
+section {
+  border: 5px solid pink;
+  margin: 1em;
+  border-radius: 10px;
+  background-color: rgb(214, 249, 255);
+}
+
+/* List formatting */
+main {
+  padding: 2em;
+  margin: 3em;
+  border: 4px solid pink;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 2px 1px 3px #111;
+  background-color: rgb(196, 246, 255);
+}
+
+.first-list-item {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.last-list-item {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.even-list-item {
+  background-color: rgb(196, 246, 255);
+}
+
+.odd-list-item {
+  background-color: rgb(214, 249, 255);
+}
+
+.credits {
+  height: 10px;
+  width: 100vw;
+  text-align: top center;
+}
+
+a.credits {
+  padding-bottom: 20px;
+  font-size: 10px;
+  font-style: italic;
+}
+
+.credits img {
+  margin: 5px;
+  height: 20px;
+}
