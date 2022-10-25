@@ -1,0 +1,78 @@
+* {
+  font-family: fantasy;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color:cadetblue;
+}
+
+figure {
+  height: 80px;
+  line-height: 100px;
+  display: inline-flex;
+}
+
+figure img {
+  padding-right: 5px;
+}
+
+header {
+  border-bottom: 2px;
+  border-style: solid;
+  border-color: black;
+  width: 100vw;
+  height: 100px;
+  background-color: #fff;
+}
+
+header > figure > img {
+  width: 64px;
+  height: 64px;
+  line-height: 100px;
+}
+
+.destaque {
+    margin-top: 3em;
+    padding: 0.5em;
+    border: 3px double #000;
+    background-color:darkolivegreen;
+}
+
+.wrapper {
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+ul {
+    margin-top: 2em;
+}
+li {
+    display: flex;
+    padding: 5px;
+}
+
+li a {
+    margin-left: 5px;
+}
+
+.item-lista-impar{
+    border: 1px solid #000;
+    background-color: aqua;
+}
+
+.item-lista-par{
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    background-color: aquamarine;
+}
+lista-cursos:last-child{
+    border-bottom: 1px solid #000;
+}
