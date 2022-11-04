@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.abas {
+    display: inline-flex;
+    list-style: none;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    justify-content: left;
+}
+
+.item-aba{
+    border-left: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: lightgrey;
+    padding: 1em;
+}
+
+.content-abas {
+    text-align: justify;
+    font-size: xx-large;
+    background-color: grey;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  overflow-x: hidden;
+}

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+header {
+    display: block;
+    width: 100vw;
+    height: 60vh;
+    position: relative;
+}
+
+#estrelas {
+    height: 60vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+#estrelas-img {
+    position: absolute;
+    animation: estrela-animation 140s ease-in-out infinite;
+    opacity: .8;
+}
+
+#card-estrela {
+    display: flex;
+    justify-content: center;
+    padding-top: 10rem;
+}
+
+
+/* Animations */
+
+@keyframes estrela-animation {
+    10% {
+        transform: scaleX(1);
+    }
+    25% {
+        transform: scaleX(1.5);
+    }
+    40% {
+        transform: scaleX(2);
+    }
+    25% {
+        transform: scaleX(1.5);
+    }
+}
