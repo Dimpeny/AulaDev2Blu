@@ -1,5 +1,5 @@
 /* # Confs */
-const URL_API_CHARACTER = "https://www.fishwatch.gov/api/species";
+const URL_API_PEIXE = "https://www.fishwatch.gov/api/species";
 
 /* # Functions */
 function getElement(q) {
@@ -7,13 +7,15 @@ function getElement(q) {
 }
 
 const getAPI = (url, functionCallback) => {
-    fetch(url).then(
-        (response) => response.json(), // resolve (retorno OK)
-        (error) => console.error(error) // reject (erro no retorno)
-        ).then(
-            dataJson => functionCallback(dataJson), // resolve (retorno OK)
-            erro => console.error(erro) // reject (erro no retorno)
-            ); 
+  fetch(url)
+    .then(
+      (response) => response.json(), // resolve (retorno OK)
+      (error) => console.error(error) // reject (erro no retorno)
+    )
+    .then(
+      (dataJson) => functionCallback(dataJson), // resolve (retorno OK)
+      (erro) => console.error(erro) // reject (erro no retorno)
+    );
 };
 
 const getLista = function () {};
@@ -21,7 +23,5 @@ const getLista = function () {};
 
 /* # Classes */
 class Character {
-    constructor(){
-
-    }
+  constructor() {}
 }

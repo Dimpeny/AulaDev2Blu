@@ -17,11 +17,3 @@ const getAPI = (url, functionCallback) => {
 };
 
 const getLista = function () {};
-/* # Services */
-
-/* # Classes */
-class Character {
-    constructor(){
-
-    }
-}
