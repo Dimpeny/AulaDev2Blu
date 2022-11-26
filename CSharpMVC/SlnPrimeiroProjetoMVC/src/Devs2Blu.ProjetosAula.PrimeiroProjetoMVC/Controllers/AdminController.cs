@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.Controllers
 {
@@ -7,7 +8,13 @@ namespace Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var user = new User
+            {
+                Id= 1,
+                Name = "Guilherme Rafael Zimermann",
+                Login = "GuilhermeRZ"
+            };
+            return View(user);
         }
 
         [Route("indicadores")]    
@@ -15,6 +22,11 @@ namespace Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.Controllers
         public IActionResult Indicadores()
         {
             return View();
+        }
+        [Route("cards")]
+        public PartialViewResult CardsResultados()
+        {
+            return PartialView();
         }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\devs2blu\\CSharpMVC\\SlnPrimeiroProjetoMVC\\src\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.csproj": {}
+    "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\SlnPrimeiroProjetoMVC\\src\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.csproj": {}
   },
   "projects": {
-    "C:\\devs2blu\\CSharpMVC\\SlnPrimeiroProjetoMVC\\src\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.csproj": {
+    "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\SlnPrimeiroProjetoMVC\\src\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\devs2blu\\CSharpMVC\\SlnPrimeiroProjetoMVC\\src\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.csproj",
+        "projectUniqueName": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\SlnPrimeiroProjetoMVC\\src\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.csproj",
         "projectName": "Devs2Blu.ProjetosAula.PrimeiroProjetoMVC",
-        "projectPath": "C:\\devs2blu\\CSharpMVC\\SlnPrimeiroProjetoMVC\\src\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\devs2blu\\CSharpMVC\\SlnPrimeiroProjetoMVC\\src\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC\\obj\\",
+        "projectPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\SlnPrimeiroProjetoMVC\\src\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC.csproj",
+        "packagesPath": "C:\\Users\\Dimpeny\\.nuget\\packages\\",
+        "outputPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\SlnPrimeiroProjetoMVC\\src\\Devs2Blu.ProjetosAula.PrimeiroProjetoMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dimpeny\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,8 +51,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
