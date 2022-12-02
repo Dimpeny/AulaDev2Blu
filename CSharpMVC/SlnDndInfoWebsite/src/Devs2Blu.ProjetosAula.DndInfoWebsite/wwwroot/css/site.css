@@ -1,0 +1,27 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.bg-paper {
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3c326417-2544-448b-970a-65116b91b4ea/d91rf3o-fdf58c49-091d-42eb-9bb4-a5793e37ad53.png/v1/fill/w_1024,h_1385,q_80,strp/phb_background_texture_by_kluckham_d91rf3o-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTM4NSIsInBhdGgiOiJcL2ZcLzNjMzI2NDE3LTI1NDQtNDQ4Yi05NzBhLTY1MTE2YjkxYjRlYVwvZDkxcmYzby1mZGY1OGM0OS0wOTFkLTQyZWItOWJiNC1hNTc5M2UzN2FkNTMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.N8r1kAuEX-Y5Hugx5BhbXQwcLjjffimmx_tFoIrhz9I');
+    background-size: cover;
+}
+
+.bg-trans-brown {
+    background-color: rgb(155,54,10,0.5);
+}

@@ -1,0 +1,21 @@
+﻿@model Devs2Blu.ProjetosAula.CSharpMVCRevisao.Models.DTOAPI.CardDTO;
+
+<div class="row">
+   <h1 class="text-danger">Lista de Cards Yu-Gi-Oh</h1>
+</div>
+
+<div class="row" id="content-list">
+    <div class="card" style="width: 15rem;">
+        <div class="card-header">
+            <img src="@Model.Card_Images[0].Image_Url" class="card-img-top">
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between">
+                    <span class="badge bg-black text-white">@Model.Id</span>
+                    <span>@Model.Name</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

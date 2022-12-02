@@ -7,18 +7,17 @@
 
 <div class="container my-4 mb-2" id="conteudo-cards"></div>
 
-@section Scripts{
+@section Scripts {
 
 <script type="text/javascript">
     $("document").ready(()=>{
         $.ajax({
                 url: '@Url.Action("CardsResultados","Admin")',
-            daraType: 'html',
-            success: (response) =>{
+            dataType: 'html',
+            success: (response) => {
                 $('#conteudo-cards').html(response);
             }
-
         });
     });
-</script>
+    </script>
 }
