@@ -13,6 +13,9 @@ namespace Devs2Blu.ProjetosAula.Exercicio2.Controllers
             _logger = logger;
         }
 
+        [Route("")]
+        [Route("Index")]
+        [Route("Home")]
         public IActionResult Index()
         {
             return View();

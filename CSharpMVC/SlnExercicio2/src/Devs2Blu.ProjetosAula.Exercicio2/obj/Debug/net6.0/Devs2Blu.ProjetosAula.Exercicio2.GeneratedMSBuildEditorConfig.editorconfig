@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Programação aula\Devs2Blu\CSharpMVC\SlnExercicio2\src\Devs2Blu.ProjetosAula.Exercicio2
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Programação aula/Devs2Blu/CSharpMVC/SlnExercicio2/src/Devs2Blu.ProjetosAula.Exercicio2/Views/Fish/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlzaFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programação aula/Devs2Blu/CSharpMVC/SlnExercicio2/src/Devs2Blu.ProjetosAula.Exercicio2/Views/Fish/LoadListFish.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlzaFxMb2FkTGlzdEZpc2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Programação aula/Devs2Blu/CSharpMVC/SlnExercicio2/src/Devs2Blu.ProjetosAula.Exercicio2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
