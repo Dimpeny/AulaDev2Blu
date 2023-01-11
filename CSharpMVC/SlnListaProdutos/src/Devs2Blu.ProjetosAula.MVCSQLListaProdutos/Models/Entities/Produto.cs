@@ -11,14 +11,16 @@ namespace Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Models.Entities
         [Column("nome")]
         [Display(Name ="Nome")]
         public string Nome { get; set; }
-        [Column("id_categoria")]
+        [Column("CategoriaId")]
         [Display(Name ="Categoria")]
-        public Categoria Categoria { get; set; }
+        public int CategoriaId { get; set; }
         [Column("preco")]
         [Display(Name ="Preço")]
-        public decimal Preco { get; set; }
+        public Double Preco { get; set; }
         [Column("quantidade")]
         [Display(Name ="Quantidade")]
         public int Quantidade { get; set; }
+
+        public virtual Categoria? Categoria { get; set; }
     }
 }

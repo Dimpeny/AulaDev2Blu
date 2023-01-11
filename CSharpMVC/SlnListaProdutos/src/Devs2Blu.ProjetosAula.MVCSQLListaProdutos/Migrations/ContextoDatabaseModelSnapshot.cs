@@ -38,6 +38,28 @@ namespace Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("categoria");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nome = "Alimentos não pereciveis"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nome = "Laticineos"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nome = "Limpeza"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Nome = "Bebidas não alcolicas"
+                        });
                 });
 
             modelBuilder.Entity("Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Models.Entities.Produto", b =>
@@ -50,15 +72,16 @@ namespace Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CategoriaId")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("CategoriaId");
 
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("nome");
 
-                    b.Property<decimal>("Preco")
-                        .HasColumnType("decimal(18,2)")
+                    b.Property<double>("Preco")
+                        .HasColumnType("float")
                         .HasColumnName("preco");
 
                     b.Property<int>("Quantidade")
@@ -70,6 +93,72 @@ namespace Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Migrations
                     b.HasIndex("CategoriaId");
 
                     b.ToTable("produto");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoriaId = 1,
+                            Nome = "Arroz Tio Urbano",
+                            Preco = 10.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoriaId = 1,
+                            Nome = "Feijão Tio Urbano",
+                            Preco = 10.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoriaId = 2,
+                            Nome = "Queijo",
+                            Preco = 20.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoriaId = 2,
+                            Nome = "Iogurte",
+                            Preco = 20.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoriaId = 3,
+                            Nome = "Sabão Líquido",
+                            Preco = 30.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoriaId = 3,
+                            Nome = "Multiuso",
+                            Preco = 30.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoriaId = 4,
+                            Nome = "Suco de Laranja 1L",
+                            Preco = 40.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoriaId = 4,
+                            Nome = "Coca-Cola 2L",
+                            Preco = 40.0,
+                            Quantidade = 5
+                        });
                 });
 
             modelBuilder.Entity("Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Models.Entities.Produto", b =>

@@ -1,4 +1,7 @@
 using Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Models;
+using Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Repository;
+using Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Services.Implements;
+using Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +13,14 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ContextoDatabase>
     (options => options.UseSqlServer("Server=LAPTOP-OG8VKPCG\\SQLEXPRESS;Database=AulaListaCompras;User Id=sa;Password=admin;"));
 
+/*
+ Dependency injection
+ */
+//Repositories
+builder.Services.AddScoped<CategoriaRepository>();
+
+//Services
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
 
 var app = builder.Build();
 

@@ -1,161 +1,105 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Models;
+﻿using Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Models;
 using Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Models.Entities;
+using Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Services.Interfaces;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Devs2Blu.ProjetosAula.MVCSQLListaProdutos.Controllers
 {
     public class CategoriasController : Controller
     {
-        private readonly ContextoDatabase _context;
+        private readonly ICategoriaService _service;
 
-        public CategoriasController(ContextoDatabase context)
+        public CategoriasController(ICategoriaService service)
         {
-            _context = context;
+            _service = service;
         }
 
-        // GET: Categorias
-        public async Task<IActionResult> Index()
+        // GET: CategoriasController
+        public async Task<ActionResult> Index()
         {
-              return View(await _context.Categoria.ToListAsync());
+            var listaCategorias = await _service.GetAllCategorias();
+            return View(listaCategorias);
         }
 
-        // GET: Categorias/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Categoria == null)
-            {
-                return NotFound();
-            }
-
-            var categoria = await _context.Categoria
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (categoria == null)
-            {
-                return NotFound();
-            }
-
-            return View(categoria);
-        }
-
-        // GET: Categorias/Create
-        public IActionResult Create()
+        // GET: CategoriasController/Details/5
+        public ActionResult Details(int id)
         {
             return View();
         }
 
-        // POST: Categorias/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome")] Categoria categoria)
+        // GET: CategoriasController/Create
+        public ActionResult Create()
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(categoria);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(categoria);
-        }
-
-        // GET: Categorias/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Categoria == null)
-            {
-                return NotFound();
-            }
-
-            var categoria = await _context.Categoria.FindAsync(id);
-            if (categoria == null)
-            {
-                return NotFound();
-            }
-            return View(categoria);
-        }
-
-        // POST: Categorias/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome")] Categoria categoria)
-        {
-            if (id != categoria.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(categoria);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CategoriaExists(categoria.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(categoria);
-        }
-
-        // GET: Categorias/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Categoria == null)
-            {
-                return NotFound();
-            }
-
-            var categoria = await _context.Categoria
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (categoria == null)
-            {
-                return NotFound();
-            }
-
-            return View(categoria);
-        }
-
-        // POST: Categorias/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Categoria == null)
-            {
-                return Problem("Entity set 'ContextoDatabase.Categoria'  is null.");
-            }
-            var categoria = await _context.Categoria.FindAsync(id);
-            if (categoria != null)
-            {
-                _context.Categoria.Remove(categoria);
-            }
             
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+
+            return View();
+            
+
         }
 
-        private bool CategoriaExists(int id)
+        // POST: CategoriasController/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult>  Create([Bind("Id,Nome")] Categoria categoria)
         {
-          return _context.Categoria.Any(e => e.Id == id);
+            try
+            {
+
+                if (ModelState.IsValid)
+                {
+                    await _service.Save(categoria);
+                    return RedirectToAction(nameof(Index));
+                }
+
+                return View(categoria);
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: CategoriasController/Edit/5
+        public ActionResult Edit(int id)
+        {
+            return View();
+        }
+
+        // POST: CategoriasController/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, IFormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: CategoriasController/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View();
+        }
+
+        // POST: CategoriasController/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id, IFormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }
