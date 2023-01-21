@@ -1,0 +1,17 @@
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\bin\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.deps.json
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\bin\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.runtimeconfig.json
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\bin\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\bin\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.pdb
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\bin\Debug\net6.0\RevisaoProjetoNoticias.Domain.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\bin\Debug\net6.0\RevisaoProjetoNoticias.Domain.pdb
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\obj\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.csproj.AssemblyReference.cache
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\obj\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\obj\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.AssemblyInfoInputs.cache
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\obj\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.AssemblyInfo.cs
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\obj\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.csproj.CoreCompileInputs.cache
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\obj\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.csproj.CopyComplete
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\obj\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\obj\Debug\net6.0\refint\RevisaoProjetoNoticias.Infra.Data.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\obj\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.pdb
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\obj\Debug\net6.0\RevisaoProjetoNoticias.Infra.Data.genruntimeconfig.cache
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnRevisaoNoticias\RevisaoProjetoNoticias.Infra.Data\obj\Debug\net6.0\ref\RevisaoProjetoNoticias.Infra.Data.dll
