@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Devs2Blu.RevisaoWebAAPPAPI.Repository\RevisaoWebAPPAPI.Infra.Data.Repository.csproj" />
+    <ProjectReference Include="..\Devs2Blu.RevisaoWebAAPPAPI.Domain\RevisaoWebAPPAPI.Infra.Data.Domain.csproj" />
+    <ProjectReference Include="..\Devs2Blu.RevisaoWebAAPPAPI.WebMVC\RevisaoWebAPPAPI.Application.WebMVC.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,35 +1,114 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using RevisaoProjetoNoticias.Domain.DTO;
+using RevisaoProjetoNoticias.Domain.Entities;
 using RevisaoProjetoNoticias.Domain.IServices;
 using RevisaoProjetoNoticias.Web.Models;
+using RevisaoProjetoNoticias.Web.Models.DTO;
 using System.Diagnostics;
 
 namespace RevisaoProjetoNoticias.Web.Controllers
 {
     public class NewsController : Controller
     {
-        private readonly ILogger<NewsController> _logger;
         private readonly INewsService _service;
+        private readonly ICategoryService _categoryService;
 
-        public NewsController(ILogger<NewsController> logger, INewsService service)
+        public NewsController(INewsService service, ICategoryService categoryService)
         {
-            _logger = logger;
             _service = service;
+            _categoryService = categoryService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            // To List all categories
+            // Get of CategoryRepository through Dependecy Injection (CategoryService)
             return View(_service.FindAll());
         }
 
-        public IActionResult Privacy()
+        public JsonResult ListJson()
         {
+            return Json(_service.FindAll());
+        }
+
+        public IActionResult Create()
+        {
+            ViewData["categoryId"] = new SelectList(_categoryService.FindAll(), "id", "name", "Select...");
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("id, title, description, categoryId, createdOn, published")] NewsDTO news)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (ModelState.IsValid)
+            {
+                if (await _service.Save(news) > 0)
+                    return RedirectToAction(nameof(Index));
+            }
+            ViewData["categoryId"] = new SelectList(_categoryService.FindAll(), "id", "name", news.categoryId);
+            return View(news);
+        }
+
+        [HttpPost]
+        public async Task<JsonResult> Delete(int? id)
+        {
+            var retDel = new ReturnJsonDel
+            {
+                status = "Success",
+                code = "200"
+            };
+            try
+            {
+                if (await _service.Delete(id ?? 0) <= 0)
+                {
+                    retDel = new ReturnJsonDel
+                    {
+                        status = "Error",
+                        code = "400"
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                retDel = new ReturnJsonDel
+                {
+                    status = ex.Message,
+                    code = "500"
+                };
+            }
+            return Json(retDel);
+        }
+        public IActionResult ImagePost(int id)
+        {
+            ImageFieldNews newsModel = new ImageFieldNews();
+            if (id != null)
+            {
+                newsModel.idNews = id;
+            }
+            return View(newsModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ImagePost(List<IFormFile> imageNews)
+        {
+            try {
+                foreach(var file in imageNews)
+                {
+                    var img = imageNews.FirstOrDefault();
+                    string path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot//Uploads", img.FileName);
+
+                    var stream = new FileStream(path, FileMode.Create);
+                    file.CopyToAsync(stream);
+                    ViewBag.Message= $"Arquivo salvo com sucesso em: {path}";
+                }
+            
+            }catch (Exception ex)
+            {
+                ViewBag.Message = $"Erro: {ex.Message}";
+            }
+            return View();
         }
     }
 }

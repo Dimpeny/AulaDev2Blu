@@ -20,11 +20,21 @@ namespace RevisaoProjetoNoticias.Domain.DTO
             return new CategoryDTO
             {
                 id = category.Id,
-                name = category.Name,
+                name = category.Name/*,
                 newsList = category.NewsList.Select(c => new NewsDTO()
                 {
 
                 }).ToList()
+                */
+            };
+        }
+
+        public Category MapToEntity()
+        {
+            return new Category()
+            {
+                Id = id,
+                Name = name
             };
         }
     }

@@ -16,5 +16,6 @@ namespace RevisaoProjetoNoticias.Domain.Entities
         public bool Published { get; set; }
 
         public virtual Category? Category { get; set; }
+        public string Image { get; internal set; }
     }
 }

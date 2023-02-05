@@ -1,0 +1,6 @@
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\src\Devs2Blu.RevisaoWebAAPPAPI.Domain\bin\Debug\Devs2Blu.RevisaoWebAAPPAPI.Domain.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\src\Devs2Blu.RevisaoWebAAPPAPI.Domain\bin\Debug\Devs2Blu.RevisaoWebAAPPAPI.Domain.pdb
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\src\Devs2Blu.RevisaoWebAAPPAPI.Domain\obj\Debug\RevisaoWebAPPAPI.Infra.Data.Domain.csproj.AssemblyReference.cache
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\src\Devs2Blu.RevisaoWebAAPPAPI.Domain\obj\Debug\RevisaoWebAPPAPI.Infra.Data.Domain.csproj.CoreCompileInputs.cache
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\src\Devs2Blu.RevisaoWebAAPPAPI.Domain\obj\Debug\Devs2Blu.RevisaoWebAAPPAPI.Domain.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\src\Devs2Blu.RevisaoWebAAPPAPI.Domain\obj\Debug\Devs2Blu.RevisaoWebAAPPAPI.Domain.pdb

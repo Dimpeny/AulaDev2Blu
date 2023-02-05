@@ -1,6 +1,7 @@
 ﻿using RevisaoProjetoNoticias.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,13 +13,17 @@ namespace RevisaoProjetoNoticias.Domain.DTO
         public int id { get; set; }
         public string title { get; set; }
         public string description { get; set; }
+        [DisplayName("Category")]
         public int categoryId { get; set; }
         public DateTime? created { get; set; }
         public bool published { get; set; }
 
+        public string? image { get; set; }
+
         public virtual CategoryDTO? category { get; set; }
 
-        public News mapToEntity()
+
+        public News MapToEntity()
         {
             return new News()
             {
@@ -27,11 +32,12 @@ namespace RevisaoProjetoNoticias.Domain.DTO
                 Description = description,
                 CategoryId = categoryId,
                 Created = created,
-                Published = published
+                Published = published,
+                Image = image
             };
         }
 
-        public NewsDTO mapToDTO(News news)
+        public NewsDTO MapToDTO(News news)
         {
             return new NewsDTO()
             {
@@ -41,12 +47,7 @@ namespace RevisaoProjetoNoticias.Domain.DTO
                 categoryId = news.CategoryId,
                 created = news.Created,
                 published = news.Published,
-                category = new CategoryDTO()
-                {
-                    id = news.Category.Id,
-                    name = news.Category.Name
-
-                }
+                image = news.Image
             };
         }
     }

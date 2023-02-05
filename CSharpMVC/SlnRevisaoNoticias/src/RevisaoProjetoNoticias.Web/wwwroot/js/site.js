@@ -1,4 +1,18 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const bootstrap = require("../lib/bootstrap/dist/js/bootstrap");
 
-// Write your JavaScript code.
+$(document).ready(() => {
+    console.lof('CMSSite script loaded.')
+
+
+});
+
+liveToastMessage = () => {
+    const origin = $('#toast-origin')
+    const toastLiveMessages = $('#liveToast');
+    if (toastTriger) {
+        const toast = new bootstrap.Toast(toastLiveMessages);
+
+        toast.show();
+
+    }
+}

@@ -1,0 +1,163 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieAPI\\Devs2Blu.MovieAPI.csproj": {}
+  },
+  "projects": {
+    "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\Devs2Blu.MovieDomain\\Devs2Blu.MovieDomain.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\Devs2Blu.MovieDomain\\Devs2Blu.MovieDomain.csproj",
+        "projectName": "Devs2Blu.MovieDomain",
+        "projectPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\Devs2Blu.MovieDomain\\Devs2Blu.MovieDomain.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieAPI\\Devs2Blu.MovieAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieAPI\\Devs2Blu.MovieAPI.csproj",
+        "projectName": "Devs2Blu.MovieAPI",
+        "projectPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieAPI\\Devs2Blu.MovieAPI.csproj",
+        "packagesPath": "C:\\Users\\Dimpeny\\.nuget\\packages\\",
+        "outputPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Dimpeny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\Devs2Blu.MovieDomain\\Devs2Blu.MovieDomain.csproj": {
+                "projectPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\Devs2Blu.MovieDomain\\Devs2Blu.MovieDomain.csproj"
+              },
+              "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieRepository\\Devs2Blu.MovieRepository.csproj": {
+                "projectPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieRepository\\Devs2Blu.MovieRepository.csproj"
+              },
+              "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieServices\\Devs2Blu.MovieServices.csproj": {
+                "projectPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieServices\\Devs2Blu.MovieServices.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieRepository\\Devs2Blu.MovieRepository.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieRepository\\Devs2Blu.MovieRepository.csproj",
+        "projectName": "Devs2Blu.MovieRepository",
+        "projectPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieRepository\\Devs2Blu.MovieRepository.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\Devs2Blu.MovieDomain\\Devs2Blu.MovieDomain.csproj": {
+                "projectPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\Devs2Blu.MovieDomain\\Devs2Blu.MovieDomain.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieServices\\Devs2Blu.MovieServices.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieServices\\Devs2Blu.MovieServices.csproj",
+        "projectName": "Devs2Blu.MovieServices",
+        "projectPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\src\\Devs2Blu.MovieServices\\Devs2Blu.MovieServices.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\Devs2Blu.MovieDomain\\Devs2Blu.MovieDomain.csproj": {
+                "projectPath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\SlnMovieAPI\\Devs2Blu.MovieDomain\\Devs2Blu.MovieDomain.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    }
+  }
+}

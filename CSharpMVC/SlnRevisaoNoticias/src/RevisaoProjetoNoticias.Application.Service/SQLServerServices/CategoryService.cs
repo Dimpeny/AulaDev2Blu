@@ -18,9 +18,10 @@ namespace RevisaoProjetoNoticias.Application.Service.SQLServerServices
             _repository = repository;
         }
 
-        public Task<int> Delete(CategoryDTO entity)
+        public async Task<int> Delete(int id)
         {
-            throw new NotImplementedException();
+            var entity = await _repository.FindById(id);
+            return await _repository.Delete(entity);
         }
 
         public List<CategoryDTO> FindAll()
@@ -33,14 +34,23 @@ namespace RevisaoProjetoNoticias.Application.Service.SQLServerServices
             }).ToList();
         }
 
-        public Task<CategoryDTO> FindById(int id)
+        public async Task<CategoryDTO> FindById(int id)
         {
-            throw new NotImplementedException();
+            var dto = new CategoryDTO();
+            return dto.MapToDTO( await _repository.FindById(id));
         }
 
         public Task<int> Save(CategoryDTO entity)
         {
-            throw new NotImplementedException();
+            if (entity.id > 0)
+            {
+                return _repository.Update(entity.MapToEntity());
+            }else
+            {
+                return _repository.Save(entity.MapToEntity());
+            }
         }
+
+
     }
 }

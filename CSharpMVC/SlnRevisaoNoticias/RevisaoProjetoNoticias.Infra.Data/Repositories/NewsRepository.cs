@@ -15,7 +15,7 @@ namespace RevisaoProjetoNoticias.Infra.Data.Repositories
 
         public NewsRepository(SQLServerContext context) : base(context)
         {
-
+            this._context = context;
         }
     }
 }

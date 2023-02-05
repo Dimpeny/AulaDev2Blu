@@ -1,0 +1,17 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Devs2Blu.MovieAPI
+build_property.RootNamespace = Devs2Blu.MovieAPI
+build_property.ProjectDir = D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\SlnMovieAPI\src\Devs2Blu.MovieAPI\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\SlnMovieAPI\src\Devs2Blu.MovieAPI
+build_property._RazorSourceGeneratorDebug = 

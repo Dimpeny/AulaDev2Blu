@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ef2QGpSqty13qhqok07k8KagBb3U1JSwdLlEyD2RaiJWPjc+Xs0f5U7I4bq0gPTSWU5eofghE6EQv3OG9VLQcQ==",
+  "success": true,
+  "projectFilePath": "D:\\Programação aula\\Devs2Blu\\CSharpMVC\\CSharpAPI\\RevisaoAPI\\src\\Devs2Blu.RevisaoWebAAPPAPI.WebAPI\\RevisaoWebAPPAPI.Application.WebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dimpeny\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Dimpeny\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Dimpeny\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Dimpeny\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Dimpeny\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\Dimpeny\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

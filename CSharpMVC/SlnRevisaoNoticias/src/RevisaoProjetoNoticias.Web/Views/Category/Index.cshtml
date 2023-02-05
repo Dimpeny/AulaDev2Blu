@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<RevisaoProjetoNoticias.Domain.DTO.CategoryDTO>
 
 <p>
-    <a class="btn btn-primary" asp-action="Create">Nova Categoria</a>
+    <a class="btn btn-primary" asp-action="Create">New Category</a>
 </p>
 <table class="table">
     <thead>
@@ -27,7 +27,7 @@
                 </td>
                 <td>
                     <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                    <a class="btn btn-danger" href="#" onclick="deleteCategoria(@item.id)">Delete</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.id">Delete</a>
                 </td>
             </tr>
         }

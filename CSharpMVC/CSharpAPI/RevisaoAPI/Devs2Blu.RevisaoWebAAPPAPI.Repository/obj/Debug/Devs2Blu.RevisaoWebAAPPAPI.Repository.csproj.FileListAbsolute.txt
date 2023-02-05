@@ -1,0 +1,9 @@
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\Devs2Blu.RevisaoWebAAPPAPI.Repository\bin\Debug\Devs2Blu.RevisaoWebAAPPAPI.Repository.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\Devs2Blu.RevisaoWebAAPPAPI.Repository\bin\Debug\Devs2Blu.RevisaoWebAAPPAPI.Repository.pdb
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\Devs2Blu.RevisaoWebAAPPAPI.Repository\bin\Debug\Devs2Blu.RevisaoWebAAPPAPI.Domain.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\Devs2Blu.RevisaoWebAAPPAPI.Repository\bin\Debug\Devs2Blu.RevisaoWebAAPPAPI.Domain.pdb
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\Devs2Blu.RevisaoWebAAPPAPI.Repository\obj\Debug\Devs2Blu.RevisaoWebAAPPAPI.Repository.csproj.AssemblyReference.cache
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\Devs2Blu.RevisaoWebAAPPAPI.Repository\obj\Debug\Devs2Blu.RevisaoWebAAPPAPI.Repository.csproj.CoreCompileInputs.cache
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\Devs2Blu.RevisaoWebAAPPAPI.Repository\obj\Debug\Devs2Blu.RevisaoWebAAPPAPI.Repository.csproj.CopyComplete
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\Devs2Blu.RevisaoWebAAPPAPI.Repository\obj\Debug\Devs2Blu.RevisaoWebAAPPAPI.Repository.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\CSharpAPI\RevisaoAPI\Devs2Blu.RevisaoWebAAPPAPI.Repository\obj\Debug\Devs2Blu.RevisaoWebAAPPAPI.Repository.pdb

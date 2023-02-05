@@ -17,9 +17,11 @@ namespace RevisaoProjetoNoticias.Application.Service.SQLServerServices
         {
              _repository = repository;
         }
-        public Task<int> Delete(NewsDTO entity)
+        public async Task<int> Delete(int id)
         {
-            throw new NotImplementedException();
+            var entity = await _repository.FindById(id);
+             return await _repository.Delete(entity);
+            
         }
 
         public List<NewsDTO> FindAll()
@@ -36,14 +38,27 @@ namespace RevisaoProjetoNoticias.Application.Service.SQLServerServices
                 }).ToList();
         }
 
-        public Task<NewsDTO> FindById(int id)
+        public async Task<NewsDTO> FindById(int id)
         {
-            throw new NotImplementedException();
+            var dto = new NewsDTO();
+            return dto.MapToDTO(await _repository.FindById(id));
         }
 
         public Task<int> Save(NewsDTO entity)
         {
-            throw new NotImplementedException();
+            if (entity.id > 0)
+            {
+                if(entity.created == null)
+                {
+                    entity.created = DateTime.Now;
+                }
+                return _repository.Update(entity.MapToEntity());
+            }
+            else
+            {
+                entity.created = DateTime.Now;
+                return _repository.Save(entity.MapToEntity());
+            }
         }
     }
 }
