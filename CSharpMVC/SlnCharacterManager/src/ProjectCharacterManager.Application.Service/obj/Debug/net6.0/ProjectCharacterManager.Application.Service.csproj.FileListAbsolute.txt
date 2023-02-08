@@ -1,0 +1,15 @@
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\bin\Debug\net6.0\ProjectCharacterManager.Application.Service.deps.json
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\bin\Debug\net6.0\ProjectCharacterManager.Application.Service.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\bin\Debug\net6.0\ProjectCharacterManager.Application.Service.pdb
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\bin\Debug\net6.0\ProjectCharacterManager.Domain.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\bin\Debug\net6.0\ProjectCharacterManager.Domain.pdb
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\obj\Debug\net6.0\ProjectCharacterManager.Application.Service.csproj.AssemblyReference.cache
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\obj\Debug\net6.0\ProjectCharacterManager.Application.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\obj\Debug\net6.0\ProjectCharacterManager.Application.Service.AssemblyInfoInputs.cache
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\obj\Debug\net6.0\ProjectCharacterManager.Application.Service.AssemblyInfo.cs
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\obj\Debug\net6.0\ProjectCharacterManager.Application.Service.csproj.CoreCompileInputs.cache
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\obj\Debug\net6.0\ProjectCharacterManager.Application.Service.csproj.CopyComplete
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\obj\Debug\net6.0\ProjectCharacterManager.Application.Service.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\obj\Debug\net6.0\refint\ProjectCharacterManager.Application.Service.dll
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\obj\Debug\net6.0\ProjectCharacterManager.Application.Service.pdb
+D:\Programação aula\Devs2Blu\CSharpMVC\SlnCharacterManager\src\ProjectCharacterManager.Application.Service\obj\Debug\net6.0\ref\ProjectCharacterManager.Application.Service.dll

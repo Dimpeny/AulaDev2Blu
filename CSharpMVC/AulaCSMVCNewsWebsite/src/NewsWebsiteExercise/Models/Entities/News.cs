@@ -23,5 +23,6 @@ namespace NewsWebsiteExercise.Models.Entities
         public string Description { get; set; }
 
         public virtual Category? Category { get; set; }
+
     }
 }

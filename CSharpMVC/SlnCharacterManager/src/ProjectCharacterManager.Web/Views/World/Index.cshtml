@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ProjectCharacterManager.Domain.DTO.WorldDTO>
+<p>
+    <a class="btn btn-primary" asp-action="Create">Add Worlds</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.id">E</a> |
+                    <a class="btn btn-danger" href="#" onclick="Delete(@item.id)">D</a>|
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section Scripts {
+    <script>
+        const Delete = (idParam) => {
+            msgModalMessage(`Deseja realmente excluir o registro ${idParam}?`, () => {
+                $.ajax({
+                    url: `@Url.Action("Delete")`,
+                    method: 'POST',
+                    data: {
+                        id: idParam
+                    },
+                    success: (resp) => {
+                        var msg = `O Registro ${idParam} foi excluído.`;
+                        if (!(resp.code == '200')) {
+                            msg = resp.status;
+                        }
+                        liveToastMessage(msg, 'World');
+                        setTimeout(() => { window.location.reload(); }, 4000);
+                    }
+                });
+                closeMsgModalMessage();
+            });
+        }
+    </script>
+}
