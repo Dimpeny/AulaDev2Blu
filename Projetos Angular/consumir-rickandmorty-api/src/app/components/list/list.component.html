@@ -1,1 +1,13 @@
-<p>list works!</p>
+<div class="bg-info p-3">
+  <div class="row">
+    <div *ngFor="let item of resultsList$ | async;" class="col-4 p-3 d-flex">
+      <div class="row d-flex bg-dark card p-3">
+        <div class="col-4">
+          <img src="{{item.image}}" alt="...">
+        </div>
+        <span class="col"> {{ item.name | titlecase }} </span>
+        <a href="{{item.url}}" class="btn btn-primary"> Mais detalhes sobre {{item.name | titlecase}}</a>
+      </div>
+    </div>
+  </div>
+</div>

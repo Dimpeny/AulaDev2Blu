@@ -10,7 +10,7 @@ export class ApiService {
 
   constructor(public http:HttpClient) {}
 
-  getPokemonList () {
+  getCharacterList () {
     return this.http.get<ApiReturn>(this.URL_API);
   }
 }
