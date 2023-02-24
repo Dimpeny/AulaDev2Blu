@@ -1,0 +1,20 @@
+<div class="p-3">
+  <div class="card bg-dark justify-between-content">
+
+    <div class="card-header bg-info text-dark">
+      <span> {{ character.name | titlecase }} </span>
+    </div>
+    <div class="row p-2">
+      <div class="col-6">
+        <img src="{{character.image}}" alt="..." class="img-thumbnail m-2">
+      </div>
+      <div class="col-6">
+        <p>Status: {{character.status}}</p>
+        <p>Species: {{character.species}}</p>
+        <p>Type: {{character.type}}</p>
+        <p>Gender: {{character.gender}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>
